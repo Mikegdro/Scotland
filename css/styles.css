@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200&display=swap');
+
+/* Aquí va a ir mi plantilla de colores, fuentes, tamaños, etc. */
+
+html {
+    /* Colores */
+    --colorPrimario: #08546C;
+    --colorSecundario: #BAF7FF;
+    --colorTerciario: #8F0D59; /* Este lo más probable es que no lo utilice*/
+    --colorFondo: #3D3D3D40;
+    --colorFondoSecundario: #5D5D5D;
+    --colorFondoAzul: #08546C50;
+
+    /* Tipografías */
+    --poppins: 'Poppins', sans-serif;
+    --outfit: 'Outfit', sans-serif;
+
+    /* Tamaños de letra */
+
+    --xs: 1.2em;
+    --s: 1.5em; /* 24/16 */
+    --sm: 2.25em; /* 36/16 */ 
+    --m: 3em; /* 48/16 */
+    --ml: 4em; /* 64/16 */
+    --l: 6em; /* 96/16 */
+}
+
+/* Experimento nuevo para aplicarle estilos automáticamente con clases */
+
+/* Tamaños de letra */
+.xs {
+    font-size: var(--xs);
+}
+
+.s {
+    font-size: var(--s);
+}
+.sm {
+    font-size: var(--sm);
+}
+.m {
+    font-size: var(--m);
+}
+.ml {
+    font-size: var(--ml);
+}
+.l {
+    font-size: var(--l);
+}
+
+/* Tipografías */
+.p {
+    font-family: var(--poppins);
+}
+
+.o {
+    font-family: var(--outfit);
+}
+
+.i {
+    font-style: italic;
+}
+
+/* =============================================================================== */
+
+body{
+    background-color: #3D3D3D;
+}
+
+/* ============================HOME============================= */
+
+.homeHero {
+    height: 100vh;
+    width: 100%;
+
+    background-image: url('../src/images/HeroHome.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.overlayHero {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    left: 0;
+    top: 0;
+
+    background-color: #00000033;
+
+    z-index: 9;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+
+    height: 150px;
+    width: 100%;
+
+    font-weight: 200;
+
+    position: absolute;
+
+    z-index: 9999;
+}
+
+.nav {
+    flex: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: transform, color .5s;
+}
+
+.nav a:hover {
+    transform: scale(1.1);
+    color: #3D3D3D40;
+
+    cursor: pointer;
+}
+
+.wrapperLogo {
+    height: 100%;
+    width: 15%;
+
+    display: flex;
+
+    flex: 1;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    background-image: url('../src/images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    width: 50%;
+    height: 100%;
+}
+
+.cita {
+
+    position: absolute;
+    width: 70%;
+
+    left: 10%;
+    bottom: 15%;
+
+    color: white;
+    font-weight: 200;
+
+    text-align: end;
+}
+
+.cita > p:last-child {
+    margin-top: 4%;
+}
+
+/* ==================================HOME========================== */
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.diapositiva {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.hogwarts {
+    background-image: url('../src/images/tren.jpg');
+}
+
+.button {
+    color: white !important;
+
+    margin: 0 5%;
+}
+
+.contenido {
+    color: white;
+
+    width: 80%;
+    
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contenido  div {
+    flex: 1;
+}
+
+.contenido  h1 {
+    flex: 4;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.tarjeta{
+    box-sizing: border-box;
+
+    text-align: justify;
+    margin: 1% 3% 3% 3%;
+
+    background-color: #3D3D3D30;
+    font-weight: 100;
+
+    backdrop-filter: blur( 4px );
+
+    padding: 4% 6%;
+
+    border-radius: 4px;
+}
+
+
