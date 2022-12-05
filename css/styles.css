@@ -204,16 +204,23 @@ nav {
     margin: 0 5%;
 }
 
+.swiper-pagination {
+    display: flex;
+    width: 70% !important;
+    margin: 0 15%;
+    justify-content: space-evenly;
+}
+
 .swiper-pagination-bullet {
     background: white;
 
-    width: 5%;
+    width: 50px;
     height: 5px;
-
-    margin: 0 14px 4px 14px !important;
 
     border-radius: 0;
 }
+
+
 
 .contenido {
     color: white;
