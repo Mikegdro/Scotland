@@ -206,15 +206,15 @@ nav {
 
 .swiper-pagination {
     display: flex;
-    width: 70% !important;
-    margin: 2% 15%;
+    width: 80% !important;
+    margin: 2% 10%;
     justify-content: space-evenly;
 }
 
 .swiper-pagination-bullet {
     background: white;
 
-    width: 50px;
+    width: 15%;
     height: 5px;
 
     border-radius: 0;
