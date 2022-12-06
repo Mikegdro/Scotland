@@ -1,5 +1,9 @@
 window.onload = function () {
-    //Mapa
+    loadSwiper();
+    loadMaps();
+}
+
+function loadMaps() {
     const map = L.map('map').setView([56.4906712, -4.2026458], 6);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -35,8 +39,6 @@ window.onload = function () {
         //Comprobamos si hay otro marker activo en el mapa y lo desactivamos
         let anterior = arrayMarkers.find(obj => obj.class != event.target.class && document.querySelector(obj.class).classList.contains('active'));
 
-        console.log(anterior)
-
         if(anterior != null) {
             let anteriorElement = document.querySelector(anterior.class);
             anteriorElement.classList.toggle('active');
@@ -57,9 +59,9 @@ window.onload = function () {
         }
         
     }
+}
 
-
-    // Swiper
+function loadSwiper() {
     const swiper = new Swiper('.swiper', {
         speed: 400,
         spaceBetween: 100,
