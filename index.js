@@ -4,7 +4,10 @@ window.onload = function () {
 }
 
 function loadMaps() {
-    const map = L.map('map').setView([56.4906712, -4.2026458], 6);
+    const map = L.map('map', {
+        dragging: false,
+        scrollWheelZoom: false,
+    }).setView([56.4906712, -4.2026458], 6);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
