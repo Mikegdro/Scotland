@@ -1,5 +1,4 @@
 window.onload = function () {
-    console.log("hi")
     //Mapa
     const map = L.map('map').setView([56.4906712, -4.2026458], 6);
 
@@ -8,14 +7,53 @@ window.onload = function () {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
+    
+
     function onMapClick(e) {
         alert("You clicked the map at " + e.latlng);
     };
 
     map.on('click', onMapClick);
 
+    var arrayMarkers = [];
 
-    var marker = L.marker([57.48759, -4.221497]).addTo(map);
+    var inverness = L.marker([57.48759, -4.221497]).addTo(map);
+    inverness.class = ".inverness";
+    inverness.on('click', showDescription);
+
+    var perth = L.marker([56.393474, -3.434833]).addTo(map);
+    perth.class = ".perth";
+    perth.on('click', showDescription);
+
+    arrayMarkers.push(inverness);
+    arrayMarkers.push(perth)
+
+    function showDescription(event) {
+        //Sacamos el objeto en el que se ha pinchado
+        let obj = document.querySelector(event.target.class);
+
+        //Comprobamos si hay otro marker activo en el mapa y lo desactivamos
+        let anterior = arrayMarkers.find(obj => obj.class != event.target.class && document.querySelector(obj.class).classList.contains('active'));
+
+        console.log(anterior)
+
+        if(anterior != null) {
+            let anteriorElement = document.querySelector(anterior.class);
+            anteriorElement.classList.toggle('active');
+            anteriorElement.style.height = '0vh';
+        } 
+        
+        //Activamos/desactivamos en el que se ha pinchado
+        obj.classList.toggle('active');
+
+        //Aplicamos los estilos
+        if(obj.classList.contains('active')){
+            obj.style.height = '100vh'; 
+        }else {
+            obj.style.height = '0vh';
+        }
+        
+    }
 
 
     // Swiper

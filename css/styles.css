@@ -275,13 +275,23 @@ nav {
     height: 50vh;
 }
 
-.inverness {
-    height: 100vh;
+.contenidoMapa {
+    height: 0vh;
     width: 70%;
 
     margin: 0 auto;
 
+
+    transition: height .5s;
+}
+
+.inverness {
     background-color: #8F0D59;
+    height: 100vh;
+}
+
+.perth {
+    background-color: #08546C;
 }
 
 @media screen and (max-width: 1160px) {
