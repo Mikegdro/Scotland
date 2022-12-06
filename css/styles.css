@@ -22,6 +22,7 @@ html {
     --m: 3em; /* 48/16 */
     --ml: 4em; /* 64/16 */
     --l: 6em; /* 96/16 */
+
 }
 
 /* Experimento nuevo para aplicarle estilos automáticamente con clases */
@@ -284,13 +285,15 @@ nav {
 }
 
 .contenidoMapa {
-    height: 100vh;
     width: 70%;
 
-    margin: 0 auto;
+    background-color: #ffffff;
 
+    margin: 0 auto;  
 
-    transition: height .5s;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
 }
 .uniqueExperiences {
     position: relative;
@@ -307,15 +310,7 @@ nav {
 
     z-index: 999;
 }
-/* Estas dos clases van fuera cuando termine de maquetarlas */
-.inverness {
-    background-color: #ffffff;
-    height: 100vh;
-}
 
-.perth {
-    background-color: #08546C;
-}
 
 .fotoContenido {
     width: 100%;
@@ -328,7 +323,10 @@ nav {
 
 .fotoInverness{
     background-image: url('../src/images/castle2Movil.jpg');
-    
+}
+
+.fotoPerth{
+    background-image: url('../src/images/perth.jpg');
 }
 
 .contenidoMapa .texto {
@@ -366,10 +364,22 @@ nav {
     text-decoration: none;
 }
 
+.textoFoto {
+    position: absolute;
 
+    bottom: 4%;
+    left: 14%;
 
+    font-weight: 100;
 
+    color: white;
+    font-family: 'Outfit';
+    font-size: var(--m);
+}
 
+.overlayExp {
+    background-color: #00000062;
+}
 
 
 @media screen and (max-width: 1160px) {

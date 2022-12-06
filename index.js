@@ -40,7 +40,8 @@ window.onload = function () {
         if(anterior != null) {
             let anteriorElement = document.querySelector(anterior.class);
             anteriorElement.classList.toggle('active');
-            anteriorElement.style.height = '0vh';
+            anteriorElement.style.maxHeight = null;
+            // anteriorElement.style.display = 'none';
         } 
         
         //Activamos/desactivamos en el que se ha pinchado
@@ -48,9 +49,11 @@ window.onload = function () {
 
         //Aplicamos los estilos
         if(obj.classList.contains('active')){
-            obj.style.height = '100vh'; 
+            // obj.style.display = 'block';
+            obj.style.maxHeight = obj.scrollHeight + 'px';
         }else {
-            obj.style.height = '0vh';
+            // obj.style.display = 'none';
+            obj.style.maxHeight = '0px';
         }
         
     }
