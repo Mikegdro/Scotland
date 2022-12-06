@@ -432,6 +432,10 @@ nav {
         --ml: 2.6875em; /* 43/16 */
         --l: 3em; /* 96/16 */
     }
+
+    .contenidoMapa {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 470px) {
