@@ -74,3 +74,10 @@ window.onload = function () {
     });
 }
 
+document.addEventListener("click", event => {
+    if(event.target.classList.contains('boton')){
+        let anchor = Array.from(event.target.childNodes);
+        window.location = anchor[1].getAttribute("href");
+    }
+})
+

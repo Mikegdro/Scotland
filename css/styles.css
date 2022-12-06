@@ -92,7 +92,7 @@ body{
     position: relative;
 }
 
-.overlayHero {
+.overlay {
     position: absolute;
 
     height: 100%;
@@ -280,11 +280,11 @@ nav {
 
 #map {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
 }
 
 .contenidoMapa {
-    height: 0vh;
+    height: 100vh;
     width: 70%;
 
     margin: 0 auto;
@@ -307,17 +307,70 @@ nav {
 
     z-index: 999;
 }
-
-
-
+/* Estas dos clases van fuera cuando termine de maquetarlas */
 .inverness {
-    background-color: #8F0D59;
+    background-color: #ffffff;
     height: 100vh;
 }
 
 .perth {
     background-color: #08546C;
 }
+
+.fotoContenido {
+    width: 100%;
+    padding-bottom: 50%;
+
+    background-size: cover;
+
+    position: relative;
+}
+
+.fotoInverness{
+    background-image: url('../src/images/castle2Movil.jpg');
+    
+}
+
+.contenidoMapa .texto {
+    margin: 5% 10%;
+
+    color: var(--colorFondoSecundario);
+    font-family: 'Outfit';
+    font-size: var(--s);
+
+    text-align: justify;
+}
+
+.boton {
+    width: fit-content;
+
+    margin: 5% auto;
+    padding: 1% 5%;
+    border: 1px solid rgba(56, 56, 56, 0.726);
+
+    color: rgba(56, 56, 56, 0.726);
+
+    transition: transform .2s, background-color .5s, color .5s;
+}
+
+.boton:hover{
+    cursor: pointer;
+
+    transform: scale(1.1);
+    color: white;
+    background-color: var(--colorPrimario);
+}
+
+.boton a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 1160px) {
     .homeHero {
