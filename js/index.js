@@ -1,3 +1,4 @@
+window.onload(() => {
 //Mapa
 const map = L.map('map').setView([56.4906712, -4.2026458], 6);
 
@@ -32,3 +33,5 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev'
     }
 });
+})
+
