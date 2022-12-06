@@ -60,6 +60,14 @@ html {
     font-style: italic;
 }
 
+.bold{
+    font-weight: 400;
+}
+
+#map {
+    filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
 /* =============================================================================== */
 
 body{
@@ -284,6 +292,23 @@ nav {
 
     transition: height .5s;
 }
+.uniqueExperiences {
+    position: relative;
+}
+
+.tituloExperiences {
+    position: absolute;
+    top: 2%;
+    width: 100%;
+
+    text-align: center;
+    color: white;
+    font-weight: 100;
+
+    z-index: 999;
+}
+
+
 
 .inverness {
     background-color: #8F0D59;
