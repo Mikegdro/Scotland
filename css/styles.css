@@ -26,7 +26,6 @@ html {
 }
 
 /* Experimento nuevo para aplicarle estilos automáticamente con clases */
-
 /* Tamaños de letra */
 .xs {
     font-size: var(--xs);
@@ -69,6 +68,37 @@ html {
     filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
 }
 
+.collapsible {
+    display: none;
+
+    z-index: 9999;
+}
+
+.hiddenMenu {
+    max-width: 0;
+    overflow: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 9998;
+
+    background-color: #3d3d3d3f;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+
+    display: flex;
+    flex-direction: column;
+
+    transition: max-width 1s;
+}
+.hiddenMenu .nav {
+    flex-direction: column;
+}
 /* =============================================================================== */
 
 body{
@@ -116,7 +146,7 @@ nav {
 
     font-weight: 200;
 
-    position: absolute;
+    position: relative;
 
     z-index: 9999;
 }
@@ -435,6 +465,75 @@ nav {
 
     .contenidoMapa {
         width: 100%;
+    }
+
+    .collapsible {
+        display: block;
+
+        flex: .5;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .menuButton {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+    }
+
+    .menuButtonBurger{
+        width: 50px;
+        height: 6px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(82, 82, 82, 0.397);
+        transition: all .5s ease-in-out;
+    }
+
+    .menuButtonBurger::before,
+    .menuButtonBurger::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(82, 82, 82, 0.397);
+        transition: all .5s ease-in-out;
+    }
+
+    .menuButtonBurger::before {
+        transform: translateY(-16px);
+    }
+
+    .menuButtonBurger::after {
+        transform: translateY(16px);
+    }
+
+    .menuButton.open .menuButtonBurger {
+        transform: translateX(-50px);
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .menuButton.open .menuButtonBurger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    .menuButton.open .menuButtonBurger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+    nav .nav {
+        display: none;
     }
 }
 
