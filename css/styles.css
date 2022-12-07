@@ -253,17 +253,22 @@ nav {
     margin: 0 5%;
 }
 
-.emblematicPlaces .swiper-pagination {
+ .swiper > h1 {
+    font-weight: 100;
+    color: white;
+}
+
+.sliderHome .swiper-pagination {
     display: flex;
     width: 80% !important;
     margin: 1% 10%;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
-.emblematicPlaces .swiper-pagination-bullet {
+.sliderHome .swiper-pagination-bullet {
     background: white;
 
-    width: 15%;
+    width: 10%;
     height: 5px;
 
     border-radius: 0;
@@ -418,6 +423,11 @@ nav {
     background-color: #00000062;
 }
 
+/* =============================== Cities of Scotland ================================== */
+
+.edimburgh {
+    background-image: url('../src/images/Home/edimburgo.jpg');
+}
 
 /* ===================================================================================== TRAVEL ========================================================================================== */
 .homeTravel {
@@ -506,18 +516,30 @@ nav {
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
 
-    background-color: #0000005d;
+    background-color: #00000077;
 
     z-index: 1;
 }
 
-.homeRoutes .titulo {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+.routesTitle {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-around;
+    height: 100%;
+    width: 0;
 }
 
-.northRoute {
+.routesTitle p {
+    letter-spacing: 0;
+}
+
+.sliderRoute {
     position: relative;
+}
+
+.swiperCoast > h1{
+    position:absolute;
 }
 
 .thurso {
@@ -533,19 +555,12 @@ nav {
     left: 0;
     top: 0;
 
-    background-color: #00000010;
+    background-color: #20202046;
 
     z-index: 1;
 }
 
-.northRoute .swiper-pagination {
-    display: flex;
-    width: 80% !important;
-    margin: 1% 10%;
-    justify-content: space-evenly;
-}
-
-.northRoute  .swiper-pagination-bullet {
+.sliderRoute .swiper-pagination-bullet {
     background: transparent;
     color: white;
 
@@ -554,7 +569,33 @@ nav {
     font-size: var(--s);
     font-family: var(--poppins);
 }
+
+.sliderRoute .swiper-pagination {
+    bottom: 4%;
+}
+
+.sliderRoute .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+    display: none;
+}
+
+.sliderRoute .swiper-button-next, .sliderRoute .swiper-button-prev {
+    top: 93%;
+    z-index: 999;
+}
+.sliderRoute .swiper-button-next {
+    right: 25%;
+}
+
+.sliderRoute .swiper-button-prev {
+    left: 25%;
+}
+
+.sliderRoute .tarjeta{
+    margin-bottom: 100px;
+}
+
 @media screen and (max-width: 1160px) {
+
     .homeHero {
         background-image: url('../src/images/Home/hero.jpg');
     }
@@ -672,6 +713,15 @@ nav {
     nav .nav {
         display: none;
     }
+
+    .sliderRoute .swiper-button-next {
+        right: 10%;
+    }
+    
+    .sliderRoute .swiper-button-prev {
+        left: 10%;
+    }
+
 }
 
 @media screen and (max-width: 470px) {

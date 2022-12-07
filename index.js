@@ -67,6 +67,7 @@ function loadMaps() {
 function loadSwiper() {
     const swiper = new Swiper('.swiper', {
         speed: 400,
+        effect: 'fade',
 
         pagination: {
             el: '.swiper-pagination',
