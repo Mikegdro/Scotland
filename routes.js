@@ -1,6 +1,6 @@
 window.onload = function () {
     loadSwiper();
-    loadMaps();
+    // loadMaps();
 }
 
 function loadMaps() {
@@ -65,13 +65,16 @@ function loadMaps() {
 }
 
 function loadSwiper() {
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.swiperCoast', {
         speed: 400,
-
+        effect: "fade",
+        grabCursor: true,
         pagination: {
             el: '.swiper-pagination',
-            type: 'bullets',
             clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + 'Day ' + (index + 1) + "</span>";
+            },
         },
 
         navigation: {
@@ -87,4 +90,3 @@ document.addEventListener("click", event => {
         window.location = anchor[1].getAttribute("href");
     }
 })
-

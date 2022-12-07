@@ -18,7 +18,7 @@ html {
 
     --xs: 1.2em;
     --s: 1.5em; /* 24/16 */
-    --sm: 2.25em; /* 36/16 */ 
+    --sm: 1.875em; /* 30/16 */ 
     --m: 3em; /* 48/16 */
     --ml: 4em; /* 64/16 */
     --l: 6em; /* 96/16 */
@@ -105,20 +105,23 @@ body{
 
 /* ============================HOME============================= */
 
-.wrapperTitulo {
+.homeHero .wrapperTitulo {
     display: none;
 }
 
-.homeHero {
+.hero {
     height: 100vh;
     width: 100%;
 
-    background-image: url('../src/images/HeroHome.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
     position: relative;
+}
+
+.homeHero {
+    background-image: url('../src/images/Home/HeroHome.jpg');
 }
 
 .overlay {
@@ -193,7 +196,7 @@ nav {
 }
 
 .logo {
-    background-image: url('../src/images/logo.png');
+    background-image: url('../src/images/Home/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -242,7 +245,7 @@ nav {
 }
 
 .hogwarts {
-    background-image: url('../src/images/tren.jpg');
+    background-image: url('../src/images/Home/tren.jpg');
 }
 
 .button {
@@ -250,14 +253,14 @@ nav {
     margin: 0 5%;
 }
 
-.swiper-pagination {
+.emblematicPlaces .swiper-pagination {
     display: flex;
     width: 80% !important;
     margin: 1% 10%;
     justify-content: space-evenly;
 }
 
-.swiper-pagination-bullet {
+.emblematicPlaces .swiper-pagination-bullet {
     background: white;
 
     width: 15%;
@@ -266,26 +269,32 @@ nav {
     border-radius: 0;
 }
 
-
-
 .contenido {
     color: white;
 
     width: 80%;
+
+    align-self: end;
     
     display: flex;
     flex-direction: column;
 }
 
-.contenido  div {
-    flex: 1;
-}
-
-.contenido  h1 {
-    flex: 4;
-    margin-top: 7%;
+.contenido .wrapper > h1 {
     text-align: center;
 }
+
+.swiper > h1 {
+    position: absolute;
+
+    margin: 3% 0;
+
+    text-align: center;
+    width: 100%;
+
+    z-index: 9999;
+}
+
 
 .tarjeta{
     box-sizing: border-box;
@@ -300,7 +309,7 @@ nav {
     -webkit-backdrop-filter: blur( 4px );
     border: 1px solid rgba(56, 56, 56, 0.18);
 
-    padding: 4% 6%;
+    padding: 2% 4%;
 
     border-radius: 4px;
 }
@@ -350,11 +359,11 @@ nav {
 }
 
 .fotoInverness{
-    background-image: url('../src/images/castle2Movil.jpg');
+    background-image: url('../src/images/Home/castle2Movil.jpg');
 }
 
 .fotoPerth{
-    background-image: url('../src/images/perth.jpg');
+    background-image: url('../src/images/Home/perth.jpg');
 }
 
 .contenidoMapa .texto {
@@ -410,12 +419,147 @@ nav {
 }
 
 
+/* ===================================================================================== TRAVEL ========================================================================================== */
+.homeTravel {
+    background-image: url('../src/images/Travel/Hero.jpg');
+}
+
+.homeTravel .wrapperTitulo {
+    display: flex;
+    position: absolute;
+    top: 25%;
+
+    z-index: 999;
+
+    width: 100%;
+    height: 200px;
+
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: start;
+
+    padding-left: 10%;
+
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins';
+    font-size: var(--ml);
+    font-weight: 100;
+    line-height: 125%;
+}
+
+.homeTravel .overlayHero {
+    position: absolute;
+    
+    height: 100%;
+    width: 100%;
+
+    left: 0;
+    top: 0;
+
+    background-color: #0000005d;
+
+    z-index: 1;
+}
+
+/* ==========================================================================ROUTES=========================================== */
+.homeRoutes {
+    background-image: url('../src/images/Routes/hero.jpg');
+}
+.homeRoutes .wrapperTitulo {
+    display: flex;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 0;
+
+    z-index: 999;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins';
+    font-size: var(--m);
+    font-weight: 100;
+    line-height: 125%;
+
+    letter-spacing: 35px;
+}
+
+.homeRoutes .overlayHero {
+    position: absolute;
+    
+    height: 100%;
+    width: 50%;
+
+    left: 0;
+    top: 0;
+
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+
+    background-color: #0000005d;
+
+    z-index: 1;
+}
+
+.homeRoutes .titulo {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+.northRoute {
+    position: relative;
+}
+
+.thurso {
+    background-image: url('../src/images/Routes/Ruta1.jpeg');
+}
+
+.overlayRoutes {
+    position: absolute;
+    
+    height: 100%;
+    width: 100%;
+
+    left: 0;
+    top: 0;
+
+    background-color: #00000010;
+
+    z-index: 1;
+}
+
+.northRoute .swiper-pagination {
+    display: flex;
+    width: 80% !important;
+    margin: 1% 10%;
+    justify-content: space-evenly;
+}
+
+.northRoute  .swiper-pagination-bullet {
+    background: transparent;
+    color: white;
+
+    width: fit-content;
+
+    font-size: var(--s);
+    font-family: var(--poppins);
+}
 @media screen and (max-width: 1160px) {
     .homeHero {
-        background-image: url('../src/images/hero.jpg');
+        background-image: url('../src/images/Home/hero.jpg');
     }
 
-    .overlayHero {
+    .homeHero .overlayHero {
         position: absolute;
     
         height: 100%;
@@ -429,22 +573,7 @@ nav {
         z-index: 1;
     }
 
-    .wrapperTitulo {
-        display: flex;
-        position: absolute;
-        top: 25%;
-
-        z-index: 999;
-
-        width: 100%;
-        height: 200px;
-
-        overflow: hidden;
-
-        align-items: center;
-        justify-content: center;
-    }
-    .titulo {
+    .heroHome .titulo {
         color: rgb(177, 177, 177);
         font-family: 'Roboto Condensed';
         font-size: var(--l);
@@ -550,7 +679,7 @@ nav {
         --l: 2em;
     }
 
-    .titulo {
+    .hero:not(.homeRoutes) .titulo {
         letter-spacing: 25px;
     }
 }

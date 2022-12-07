@@ -10,14 +10,15 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/styles.css">
-        <title>Scotland - Home</title>
+        <title>Scotland - Routes</title>
     </head>
+    
     <body>
 
-         <!-- ============= HERO SECTION ===================== -->
-        <section class="homeHero hero">
+        <!-- Sección hero -->
+        <section class="homeRoutes hero">
             <div class="wrapperTitulo">
-                <h1 class="titulo">SCOTLAND</h1>
+                <h1 class="titulo">Routes</h1>
             </div>
            
             <nav>
@@ -28,9 +29,9 @@
                 </div>
                 
                 <ul class="nav o s">
-                    <li><a class="link active" href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="travel.html">Travel</a></li>
-                    <li><a href="routes.html">Routes</a></li>
+                    <li><a class="link active" href="#">Routes</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
 
@@ -41,37 +42,27 @@
                 </div>
             </nav>
 
-            <div class="cita">
-                <p class="p s i">
-                    “Èist ri gaoth nam beann gus an traogh na huisgeachan”
-                </p>
-
-                <p class="p xs i">
-                    Listen to the wind upon the hill till the waters abate.
-                </p>
-            </div>
-
             <div class="overlayHero">
 
             </div>
             
             <div class="hiddenMenu">
                 <ul class="nav o s">
-                    <li><a class="link active" href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="travel.html">Travel</a></li>
-                    <li><a href="routes.html">Routes</a></li>
+                    <li><a class="link active" href="#">Routes</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </section>
 
-        <!-- ============= Emblematic Places ===================== -->
-        <section class="emblematicPlaces">
-            <div class="swiper">
-                <h1 class="p ml">Emblematic <br/> <span class="bold">Places</span></h1>
+        <!-- Sección North -->
+        <section class="northRoute">
+            <div class="swiper swiperCoast">
+                <h1 class="p ml"><span class="bold">North Coast</span><br/>Itinarary </h1>
                 <!-- Slides -->
                 <div class="swiper-wrapper">
-
+                    
                     <!-- Slide 1 -->
                     <div class="swiper-slide diapositiva">
                         <div class="contenido">
@@ -85,6 +76,7 @@
                             </div>
                             
                         </div>
+                        <div class="overlayRoutes"></div>
                     </div>
 
                     <!-- Slide 2 -->
@@ -100,10 +92,11 @@
                             </div>
                             
                         </div>
+                        <div class="overlayRoutes"></div>
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="swiper-slide diapositiva hogwarts">
+                    <div class="swiper-slide diapositiva thurso">
                         <div class="contenido">
                             <div class="wrapper">
                                 <h1 class="p m">Hogwarts Express</h1>
@@ -115,6 +108,7 @@
                             </div>
                             
                         </div>
+                        <div class="overlayRoutes"></div>
                     </div>
 
                     <!-- Slide 4 -->
@@ -130,6 +124,7 @@
                             </div>
                             
                         </div>
+                        <div class="overlayRoutes"></div>
                     </div>
 
                     <!-- Slide 5 -->
@@ -145,6 +140,7 @@
                             </div>
                             
                         </div>
+                        <div class="overlayRoutes"></div>
                     </div>
                 </div>
 
@@ -157,76 +153,32 @@
                 <div class="swiper-pagination">
                     
                 </div>
-
+                
             </div>
         </section>
 
-        <!-- ============= Unique Experiences ================= -->
-        <section class="uniqueExperiences">
-            <h1 class="tituloExperiences p ml">Unique<br/><span class="bold">Experiences</span></h1>
-            <div id="map"></div>
-            <div class="inverness contenidoMapa">
+        <!-- Sección Harry Potter -->
+        <section class="harryPotterRoute" style="height: 10vh;">
 
-                <div class="fotoInverness fotoContenido">
-
-                    <div class="overlay overlayExp">
-
-                        <div class="textoFoto">
-                            Inverness<br/>
-                            <span class="bold">Eilean Dolian Castle</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="texto">
-                    <p>
-                        Inverness means "Mouth of the River Ness" is a city in the Scottish Highlands. Inverness lies near two important battle sites: the 11th-century 
-                        battle of Blàr nam Fèinne against Norway which took place on the Aird, and the 18th century Battle of Culloden which took place on Culloden Moor.
-                    </p>
-                    <div class="boton">
-                        <a href="https://es.wikipedia.org/wiki/Inverness"> See More </a>
-                    </div>
-                </div>
-            </div>
-            <div class="perth contenidoMapa">
-                <div class="fotoPerth fotoContenido">
-
-                    <div class="overlay overlayExp">
-    
-                        <div class="textoFoto">
-                            Perth<br/>
-                            <span class="bold">St Matthew's Church</span>
-                        </div>
-    
-                    </div>
-    
-                </div>
-    
-                <div class="texto">
-                    <p>
-                        St Matthew's Church (formerly Free Church and West Church)[1] is a church in the Scottish city of Perth, Perth and Kinross. Of Church of Scotland denomination, 
-                        it is located on Tay Street, overlooking the River Tay, just east of the city centre. Completed in November 1871, the work of John Honeyman, it is a Category B listed building.[2]
-    
-                        In 1965, the four congregations of Wilson Church, Scott Street, West and Middle, and Bridgend Church were merged to become St Matthew's.[2]
-    
-                        The church celebrated its 150th anniversary in November 2021.
-                    </p>
-                    <div class="boton">
-                        <a href="https://en.wikipedia.org/wiki/St_Matthew%27s_Church,_Perth"> See More </a>
-                    </div>
-                </div>
-            </div>
         </section>
 
-        <!-- ============== Cities ===================== -->
-        <section class="cities" style="width: 100%; height: 100vh;">
-            
+        <!-- Sección outlander -->
+        <section class="outlanderRoute">
+
+        </section>
+
+        <!-- Sección Disclamer -->
+        <section class="disclaimer">
+
+        </section>
+        
+        <!-- Footer -->
+        <section class="footer">
+
         </section>
     </body>
 
-    <script src="index.js"></script>
+    <script src="routes.js"></script>
     <script src="button.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"

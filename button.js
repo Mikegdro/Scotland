@@ -15,11 +15,11 @@ window.addEventListener("scroll", (event) => {
     }
 
     if(this.scrollY > 850 && !cambiado){
-        logo.style.backgroundImage="url('./src/images/logo.svg')";
+        logo.style.backgroundImage="url('./src/images/home/logo.svg')";
         logo.style.paddingBottom = '50%';
         cambiado = true;
     } else if (this.scrollY < 850 && cambiado) {
-        logo.style.backgroundImage="url('./src/images/logo.png')";
+        logo.style.backgroundImage="url('./src/images/home/logo.png')";
         cambiado = false;
         logo.style.paddingBottom = '25%';
     }
