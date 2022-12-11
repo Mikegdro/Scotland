@@ -585,39 +585,54 @@ nav {
     display: none;
 
     position: absolute;
+
     color: white;
+    font-weight: 200;
+    
+
+    
 
     flex-direction: column;
     justify-content: center;
 
     top: 0;
-
-    margin: 5%;
+    height: 100%;
 }
 
 .textoPrincipal * {
-    flex: 1;
-}
-
-.textoPrincipal h1, p {
     text-align: center;
-
-    margin-top: 5%;
+    
+    overflow: scroll;
 }
 
 .textoPrincipal h1 {
+    flex: 1;
+    color: grey;
+    margin-top: 5%;
     text-align: center;
 }
 
+.textoPrincipal p {
+    flex: 4;
+    line-height: 180%;
+    text-align: justify;
+    margin: 0 3%;
+}
+
 .fotosAdicionales {
+    align-self: center;
+
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 
     justify-content: space-between;
+    align-items: center;
 }
 
 .fotosAdicionales img{
+    width: 200px;
+    height: auto;
     margin: 2% 0;
 }
 
@@ -860,6 +875,10 @@ nav {
         margin-right: -32px;
     }
 
+    .siglo {
+        flex-direction: column;
+    }
+
 }
 
 @media screen and (max-width: 780px) {
@@ -982,10 +1001,6 @@ nav {
     .entradilla {
         flex-direction: column;
     } 
-
-    .siglo {
-        flex-direction: column;
-    }
 
     .parallax {
         background-attachment: local;
