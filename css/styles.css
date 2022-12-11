@@ -986,6 +986,13 @@ nav {
     .siglo5, .siglo10 {
         flex-direction: column;
     }
+
+    .parallax {
+    background-attachment: local;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 }
 
 @media screen and (max-width: 470px) {
