@@ -517,7 +517,7 @@ nav {
 
 .wrapParallax {
     width: 100%;
-    height: 550px;
+    height: 350px;
 
     position: relative;
 }
@@ -983,15 +983,15 @@ nav {
         flex-direction: column;
     } 
 
-    .siglo5, .siglo10 {
+    .siglo {
         flex-direction: column;
     }
 
     .parallax {
-    background-attachment: local;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+        background-attachment: local;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
