@@ -3,7 +3,7 @@ const menuBtn = document.querySelector('.menuButton');
 let menuOpn = false;
 let menu = document.querySelector('.hiddenMenu');
 
-var logo = document.querySelector('.logo');
+var logo = document.querySelector('.wrapperLogo');
 var cambiado = false;
 
 
@@ -15,13 +15,11 @@ window.addEventListener("scroll", (event) => {
     }
 
     if(this.scrollY > 850 && !cambiado){
-        logo.style.backgroundImage="url('./src/images/home/logo.svg')";
-        logo.style.paddingBottom = '50%';
+        logo.classList.toggle("onHero");
         cambiado = true;
     } else if (this.scrollY < 850 && cambiado) {
-        logo.style.backgroundImage="url('./src/images/home/logo.png')";
+        logo.classList.toggle("onHero");
         cambiado = false;
-        logo.style.paddingBottom = '25%';
     }
 });
 

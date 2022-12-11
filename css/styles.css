@@ -195,13 +195,23 @@ nav {
     align-items: center;
 }
 
-.logo {
+.wrapperLogo:not(.onHero) {
+    justify-content: start;
+}
+
+.wrapperLogo:not(.onHero) .logo {
+    background-image: url('../src/images/Home/logo.svg');
+    padding-bottom: 45%;
+}
+
+.wrapperLogo .logo {
     background-image: url('../src/images/Home/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-
+    
     padding-bottom: 25%;
+
     width: 200px;
 
     color: white;
