@@ -3,8 +3,8 @@ const menuBtn = document.querySelector('.menuButton');
 let menuOpn = false;
 let menu = document.querySelector('.hiddenMenu');
 
-var logo = document.querySelector('.wrapperLogo');
-var cambiado = false;
+// var logo = document.querySelector('.wrapperLogo');
+// var cambiado = false;
 
 
 window.addEventListener("scroll", (event) => {
@@ -14,13 +14,13 @@ window.addEventListener("scroll", (event) => {
         menu.style.maxWidth = null;
     }
 
-    if(this.scrollY > 850 && !cambiado){
-        logo.classList.toggle("onHero");
-        cambiado = true;
-    } else if (this.scrollY < 850 && cambiado) {
-        logo.classList.toggle("onHero");
-        cambiado = false;
-    }
+    // if(this.scrollY > 850 && !cambiado){
+    //     logo.classList.toggle("onHero");
+    //     cambiado = true;
+    // } else if (this.scrollY < 850 && cambiado) {
+    //     logo.classList.toggle("onHero");
+    //     cambiado = false;
+    // }
 });
 
 menuBtn.addEventListener('click', () => {
