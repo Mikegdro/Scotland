@@ -23,6 +23,8 @@ html {
     --ml: 4em; /* 64/16 */
     --l: 6em; /* 96/16 */
 
+    scroll-behavior: smooth;
+
 }
 
 /* Experimento nuevo para aplicarle estilos automáticamente con clases */
@@ -451,9 +453,215 @@ nav {
 
 /* =============================== Cities of Scotland ================================== */
 
+
 .edimburgh {
     background-image: url('../src/images/Home/edimburgo.jpg');
 }
+
+/* ================================= HISTORY ========================================== */
+.entradilla {
+    display: flex;
+}
+
+.entradilla > div {
+    flex: 1;
+}
+
+.containerTextoEntradilla {
+    font-weight: 200;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+}
+
+.containerTextoEntradilla h1 {
+    text-align: center;
+    margin: 5% 0 3% 0;
+}
+
+.containerTextoEntradilla p {
+    text-align: justify;
+    margin: 5% 10% 0 10%;
+    line-height: 186.5%;
+}
+
+.navHistory {
+    display: flex;
+
+    height: 50px;
+    margin-top: 5%;
+
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navHistory a{
+    color: white;
+    font-family: var(--poppins);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.containerFotoEntradilla {
+    background-image: url('../src/images/Home/mapaHistoria.jpg');
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.wrapParallax {
+    width: 100%;
+    height: 550px;
+
+    position: relative;
+}
+
+.parallax {
+    height: 100%;
+    width: 100%;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.siglo5, .siglo10 {
+    display: flex;
+}
+
+.textoSiglo5 {
+    margin: 5% 5%;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.galeriaSiglo5{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    padding: 5%;
+
+    justify-content: center;
+    gap: 50px;
+
+    /* margin: 5% 5%; */
+}
+
+.fotoPrincipal {
+    position: relative;
+}
+
+.fotoPrincipal:hover .textoPrincipal {
+    display: flex;
+}
+
+.fotoPrincipal img {
+    width: 100%;
+
+    filter: brightness(.7);
+
+    animation: all .5s;
+}
+
+.fotoPrincipal:hover img {
+    filter: brightness(.3);
+}
+
+.textoPrincipal {
+    display: none;
+
+    position: absolute;
+    color: white;
+
+    flex-direction: column;
+    justify-content: center;
+
+    top: 0;
+
+    margin: 5%;
+}
+
+.textoPrincipal * {
+    flex: 1;
+}
+
+.textoPrincipal h1, p {
+    text-align: center;
+
+    margin-top: 5%;
+}
+
+.textoPrincipal h1 {
+    text-align: center;
+}
+
+.fotosAdicionales {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}
+
+.fotosAdicionales img{
+    margin: 2% 0;
+}
+
+.seccion .boton {
+    color: white;
+    background-color: grey;
+
+    padding: 20px 40px;
+    margin: 3% 0;
+
+    font-family: var(--poppins);
+
+    /* align-self: end; */
+}
+
+.seccion > p {
+    text-align: justify;
+    line-height: 186.5%;
+}
+
+.seccion {
+    color: white;
+    font-weight: 200;
+}
+
+
+
+.fotoParallax1 {
+    background-image: url('../src/images/Home/parallax1.jpg');
+}
+.fotoParallax2 {
+    background-image: url('../src/images/Home/parallax2.jpg');
+}
+.fotoParallax3 {
+    background-image: url('../src/images/Home/parallax3.jpg');
+}
+.fotoParallax4 {
+    background-image: url('../src/images/Home/parallax4.jpg');
+}
+.fotoParallax5 {
+    background-image: url('../src/images/Home/parallax5.jpg');
+}
+
+
 
 /* ===================================================================================== TRAVEL ========================================================================================== */
 .homeTravel {
@@ -771,6 +979,9 @@ nav {
         margin: 10% 0 0 0;
     }
 
+    .siglo5, .siglo10 {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 470px) {
