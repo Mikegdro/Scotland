@@ -979,6 +979,10 @@ nav {
         margin: 10% 0 0 0;
     }
 
+    .entradilla {
+        flex-direction: column;
+    } 
+
     .siglo5, .siglo10 {
         flex-direction: column;
     }
