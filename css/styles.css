@@ -137,6 +137,19 @@ body{
 
     z-index: 9;
 }
+.overlaySlides {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    left: 0;
+    top: 0;
+
+    background-color: #22222279;
+
+    z-index: 9;
+}
 
 nav {
     display: flex;
@@ -290,6 +303,8 @@ nav {
     width: 80%;
 
     align-self: end;
+
+    z-index: 999;
     
     display: flex;
     flex-direction: column;
@@ -297,6 +312,7 @@ nav {
 
 .contenido .wrapper > h1 {
     text-align: center;
+    text-shadow: black 1px 1px 5px;
 }
 
 .swiper > h1 {
@@ -656,7 +672,11 @@ nav {
     } */
 
     .wrapperLogo {
-        flex: 0;
+        justify-content: start;
+    }
+
+    .logo {
+        margin-left: 5%;
     }
 
     .collapsible {
@@ -729,6 +749,10 @@ nav {
         display: none;
     }
 
+    .sliderHome .swiper-pagination-bullet {
+        height: 2px;
+    }
+
     .sliderRoute .swiper-button-next {
         right: 10%;
     }
@@ -739,20 +763,35 @@ nav {
 
     .swiper > h1 {
         text-align: left;
-        margin: 15% 0 0 15%;
+        margin: 10% 0 0 10%;
     }
+
 
 }
 
 @media screen and (max-width: 470px) {
     html {
         --l: 2em;
+        --m: 1.5em;
+        --sm: 1.1em;
     }
 
     .hero:not(.homeRoutes) .titulo {
         letter-spacing: 25px;
     }
 
+    .swiper > h1 {
+        text-align: left;
+        margin: 15% 0 0 15%;
+    }
+
+    .tarjeta {
+        margin-bottom: 20%;
+    }
+
+    .sliderHome .swiper-pagination {
+        height: 1%;
+    }
     
 }
 
