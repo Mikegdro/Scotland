@@ -1322,6 +1322,11 @@ nav {
     
 }
 
+@media screen and (max-height: 550px) and (orientation: landscape) {
+    .reescaladoPortrait {
+        height: 200vh;
+    }
+}
 
 
 
