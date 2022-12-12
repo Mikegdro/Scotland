@@ -496,7 +496,7 @@ nav {
     display: flex;
 
     height: 50px;
-    margin-top: 5%;
+    margin: 4%;
 
     align-items: center;
     justify-content: space-evenly;
@@ -505,8 +505,20 @@ nav {
 .navHistory a{
     color: white;
     font-family: var(--poppins);
-    font-weight: 400;
+    font-weight: 200;
     text-decoration: none;
+    
+    transition: all .5s;
+}
+
+.navHistory a:hover {
+    transform: scale(1.1);
+    color: #08546C;
+}
+
+
+.navHistory {
+    font-size: var(--sm);
 }
 
 .containerFotoEntradilla {
@@ -610,8 +622,6 @@ nav {
 
 .textoPrincipal * {
     text-align: center;
-    
-    overflow: scroll;
 }
 
 .textoPrincipal h1 {
@@ -626,6 +636,7 @@ nav {
     line-height: 180%;
     text-align: justify;
     margin: 0 3%;
+    overflow: auto;
 }
 
 .fotosAdicionales {
@@ -721,17 +732,17 @@ nav {
     flex: 2;
 }
 
-.independence {
+.independence, .brexit {
     color: white;
     font-weight: 200;
 }
 
-.independence > h1 {
+.independence > h1, .brexit > h1 {
     margin: 5%;
     line-height: 114%;
 }
 
-.parrafo1 > p {
+.parrafo1 > p, .brexit > p {
     margin: 5%;
     line-height: 186.5%;
 
@@ -773,6 +784,16 @@ nav {
     padding-bottom: 50%;
 
     /* margin: 5%; */
+}
+
+.videoBrexit {
+    height: 80vh;
+    width: 100%;
+}
+
+.blue {
+    color: var(--colorSecundario) !important;
+    font-weight: 400 !important;
 }
 
 .fotoParallax1 {
@@ -1013,6 +1034,10 @@ nav {
     .independence > p {
         columns: unset;
     }
+
+    .entradilla {
+        flex-direction: column;
+    } 
 }
 
 @media screen and (max-width: 780px) {
@@ -1132,16 +1157,15 @@ nav {
         margin: 10% 0 0 0;
     }
 
-    .entradilla {
-        flex-direction: column;
-    } 
-
-
     .parallax {
         background-attachment: local;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .navHistory {
+        margin: 7%;
     }
 }
 
