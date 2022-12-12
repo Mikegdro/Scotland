@@ -694,7 +694,86 @@ nav {
     display: flex;
 }
 
+.textoParallax {
+    color: white;
 
+    position: absolute;
+
+    top: 30%;
+    right: 10%;
+
+    font-weight: 200;
+
+    text-align: end;
+
+    z-index: 9999;
+}
+
+.textoParallax p {
+    color: rgba(255, 255, 255, 0.493);
+}
+
+.parrafo1 {
+    display: flex;
+}
+
+.parrafo1 > p, .parrafo1 > div {
+    flex: 2;
+}
+
+.independence {
+    color: white;
+    font-weight: 200;
+}
+
+.independence > h1 {
+    margin: 5%;
+    line-height: 114%;
+}
+
+.parrafo1 > p {
+    margin: 5%;
+    line-height: 186.5%;
+
+    height: 100%;
+
+    text-align: justify;
+}
+
+.fotoVotacion {
+    padding-top: 25%;
+
+    margin: 5%;
+
+    background-image: url('../src/images/Home/siglo21/independence.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+
+    position: relative;
+}
+
+.independence > p{
+    text-align: justify;
+    margin: 5%;
+    line-height: 186.5%;
+
+    column-count: 2;
+    column-gap: 5%;
+    column-fill: auto;
+}
+
+.fotoReferendum {
+    background-image: url('../src/images/Home/siglo21/independence2.webp');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 50%;
+
+    /* margin: 5%; */
+}
 
 .fotoParallax1 {
     background-image: url('../src/images/Home/parallax1.jpg');
@@ -920,6 +999,20 @@ nav {
         padding-bottom: 50%;
     }
 
+    .parrafo1 {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .fotoVotacion {
+        flex: 1;
+        padding-bottom: 50%;
+        background-size: contain;
+    }
+
+    .independence > p {
+        columns: unset;
+    }
 }
 
 @media screen and (max-width: 780px) {
