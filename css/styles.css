@@ -269,6 +269,10 @@ nav {
     justify-content: center;
 }
 
+.swiper-slide:hover{
+    cursor: grab;
+}
+
 .hogwarts {
     background-image: url('../src/images/Home/tren.jpg');
 }
@@ -581,7 +585,11 @@ nav {
     animation: all .5s;
 }
 
-.fotoPrincipal:hover img {
+.fotoPrincipal:hover {
+    cursor: grab;
+}
+
+.fotoPrincipal:hover img, .fotoPrincipal:hover .fotos20 {
     filter: brightness(.3);
 }
 
