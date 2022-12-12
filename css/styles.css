@@ -743,7 +743,7 @@ nav {
 }
 
 .parrafo1 > p, .brexit > p {
-    margin: 5%;
+    margin: 2% 5% 0 5%;
     line-height: 186.5%;
 
     height: 100%;
@@ -789,6 +789,8 @@ nav {
 .videoBrexit {
     height: 80vh;
     width: 100%;
+
+    margin: 5% 0;
 }
 
 .blue {
@@ -812,7 +814,119 @@ nav {
     background-image: url('../src/images/Home/parallax5.jpg');
 }
 
+.final {
+    margin-top: 5%;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+}
 
+.final h1, .final p {
+    margin: 5%;
+}
+
+.final > p{
+    line-height: 189%;
+    color: grey;
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filaFina {
+    height: 200px;
+}
+
+.filaAncha {
+    height: 400px;
+}
+
+.filaFina > div {
+    flex: 1;
+}
+
+.fila > div {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.filaAncha .col2{
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.fila > div > p {
+    z-index: 999;
+
+    position: relative;
+}
+
+.fila > div > p::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 1px;
+    width: 100%;
+    max-width: 0;
+
+    background-color: white;
+
+    z-index: 999;
+
+    transition: max-width .5s;
+}
+
+.col:hover:not(.filaAncha .col2) {
+    cursor: pointer;
+}
+
+.col:hover:not(.filaAncha .col2) p::after {
+    max-width: 100%;
+}
+
+.col a {
+    color: white;
+    text-decoration: none;
+}
+
+.traduccion {
+    color: rgb(153, 153, 153);
+}
+
+
+
+.filaAncha .col1 {
+    background-image: url('../src/images/Home/final/routes.jpg');
+    flex: 2;
+}
+
+.filaAncha .col2 {
+    background-image: url('../src/images/Home/final/cardo.jpg');
+
+    flex: 3;
+}
+
+.filaFina .col1 {
+    background-image: url('../src/images/Home/final/ciervo.jpg');
+}
+
+.filaFina .col2 {
+    background-image: url('../src/images/Home/final/scotland.jpg');
+}
 
 /* ===================================================================================== TRAVEL ========================================================================================== */
 .homeTravel {
@@ -1166,6 +1280,15 @@ nav {
 
     .navHistory {
         margin: 7%;
+    }
+
+    .independence > h1, .brexit > h1 {
+        margin: 15% 0 5% 5%;
+    }
+
+    .filaAncha .col2{
+        flex-direction: column;
+        align-items: center;
     }
 }
 
