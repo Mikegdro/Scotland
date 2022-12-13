@@ -72,6 +72,10 @@ html {
     font-weight: 400;
 }
 
+.tc {
+    text-align: center;
+}
+
 #map {
     filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
 }
@@ -1000,9 +1004,10 @@ nav {
 }
 
 .homeTravel .wrapperTitulo {
+    box-sizing: border-box;
     display: flex;
     position: absolute;
-    top: 25%;
+    top: 33%;
 
     z-index: 999;
 
@@ -1018,9 +1023,9 @@ nav {
 
     color: rgb(255, 255, 255);
     font-family: 'Poppins';
-    font-size: var(--ml);
+    font-size: 4em;
     font-weight: 100;
-    line-height: 125%;
+    line-height: 155%;
 }
 
 .homeTravel .overlayHero {
@@ -1035,6 +1040,45 @@ nav {
     background-color: #0000005d;
 
     z-index: 1;
+}
+
+.byCar {
+    font-weight: 200;
+    color: white;
+}
+
+.byCar > h1, .ireland > h2, .europe > h2 {
+    margin: 5% 0 0 5%;
+}
+.contentByCar {
+    display: flex;
+}
+
+.contentByCar > p {
+    text-align: justify;
+    margin: 2% 5% 0 5%;
+
+    line-height: 169%;
+
+    flex: 1;
+}
+
+.contentByCar > div {
+    flex: 1;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    margin: 2% 5% 0 5%;
+}
+
+.fotoContent1 {
+    background-image: url('../src/images/Travel/EuroTunnel.jpg');
+}
+
+.fotoContent2 {
+    background-image: url('../src/images/Travel/ferries.jpeg');
 }
 
 /* ==========================================================================ROUTES=========================================== */
@@ -1589,6 +1633,10 @@ nav {
         background-color: white;
     
         z-index: 999;
+    }
+
+    .fotoReferendum {
+        padding-bottom: 50%;
     }
 }
 
