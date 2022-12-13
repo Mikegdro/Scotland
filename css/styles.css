@@ -17,12 +17,13 @@ html {
 
     /* Tamaños de letra */
 
-    --xs: 1.2em;
+    --xxs: 1em;
+    --xs: 1.1em;
     --s: 1.5em; /* 24/16 */
-    --sm: 1.675em; /* 30/16 */ 
-    --m: 2.2em; /* 48/16 */
-    --ml: 4em; /* 64/16 */
-    --l: 6em; /* 96/16 */
+    --sm: 1.8em; /* 30/16 */ 
+    --m: 2em; /* 48/16 */
+    --ml: 3em; /* 64/16 */
+    --l: 5em; /* 96/16 */
 
     scroll-behavior: smooth;
 
@@ -30,6 +31,10 @@ html {
 
 /* Experimento nuevo para aplicarle estilos automáticamente con clases */
 /* Tamaños de letra */
+.xxs {
+    font-size: var(--xxs);
+}
+
 .xs {
     font-size: var(--xs);
 }
@@ -179,18 +184,10 @@ nav {
 .nav a {
     color: white;
     text-decoration: none;
-
-    transition: color .5s;
 }
 
-.nav li {
-    transition: transform .4s;
-}
-
-.nav a:hover, li:hover {
-    transform: scale(1.1);
-    color: #3D3D3D;
-    cursor: pointer;
+.link a {
+    transition: all .4s ease-in;
 }
 
 .collapse {
@@ -198,7 +195,53 @@ nav {
 }
 
 .active {
-    color: var(--colorPrimario) !important;
+    position: relative
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+
+    height: 1px;
+    width: 15px;
+
+    right: -35%;
+    top: 50%;
+
+    background-color: white;
+
+    z-index: 999;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+
+    height: 1px;
+    width: 15px;
+
+    left: -35%;
+    top: 50%;
+
+    background-color: white;
+
+    z-index: 999;
+}
+
+.link {
+    transition: all .4s ease-in;
+ 
+}
+
+.link:hover, .link:hover a  {
+    transform: scale(1.1);
+    color: var(--colorSecundario);
+    
+    cursor: pointer;
+}
+
+.link:hover .active::before, .link:hover .active::after {
+    background-color: var(--colorSecundario);
 }
 
 .wrapperLogo {
@@ -550,7 +593,7 @@ nav {
 }
 
 .seccion {
-    margin: 5% 5%;
+    margin: 2% 5%;
 
     flex: 1;
 
@@ -599,7 +642,7 @@ nav {
 }
 
 .fotoPrincipal:hover {
-    cursor: grab;
+    cursor: pointer;
 }
 
 .fotoPrincipal:hover img, .fotoPrincipal:hover .fotos20 {
@@ -644,17 +687,33 @@ nav {
     align-self: center;
 
     width: 100%;
+    height: 200px;
     display: flex;
     flex-wrap: wrap;
 
     justify-content: space-around;
     align-items: center;
+
+    overflow: hidden;
 }
 
-.fotosAdicionales img{
-    width: 200px;
-    height: auto;
-    margin: 2% 0;
+.fotosAdicionales .img {
+    width: 30%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    transition: all .2s ease-in;
+}
+
+.fotosAdicionales img:hover {
+    transform: scale(1.2);
 }
 
 .siglo .boton {
@@ -691,19 +750,27 @@ nav {
     font-weight: 200;
 }
 
+.wrapperSiglo20 {
+    display: flex;
+}
+
+.fotoPrincipalS20 {
+    flex: 1;
+    margin: 5% 5%;
+
+    
+
+    position: relative;
+}
+
 .fotos20 {
-    width: 100%;
-    padding-bottom: 100%;
+    height: 100%;
 
     background-image: url('../src/images/Home/siglo20/principalCuadrada.jpg');
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 
-}
-
-.wrapperSiglo20 {
-    display: flex;
 }
 
 .textoParallax {
@@ -739,7 +806,7 @@ nav {
 }
 
 .independence > h1, .brexit > h1 {
-    margin: 5%;
+    margin: 5% 0 0 5%;
     line-height: 114%;
 }
 
@@ -753,9 +820,7 @@ nav {
 }
 
 .fotoVotacion {
-    padding-top: 25%;
-
-    margin: 5%;
+    margin: 2% 5% 0 5%;
 
     background-image: url('../src/images/Home/siglo21/independence.png');
     background-position: center center;
@@ -782,7 +847,7 @@ nav {
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
-    padding-bottom: 50%;
+    padding-bottom: 25%;
 
     /* margin: 5%; */
 }
@@ -1097,7 +1162,7 @@ nav {
 
 /* =================================== FOOTER ========================================= */
 
-.footer, .footer a {
+.footer, .footer a:not(.not) {
     color: white;
     text-decoration: none;
     font-weight: 100;
@@ -1155,15 +1220,22 @@ nav {
     border: none;
 }
 
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
 .bi {
     height: 30px;
     width: 30px;
-
-    transition: all .1s ease-in;
 }
 
-.bi:hover {
-    cursor: pointer;
+.zoom {
+    transition: all .2s ease-in-out;
+    margin: 0 3%;
+}
+
+.zoom:hover{
     transform: scale(1.2);
 }
 
@@ -1178,9 +1250,10 @@ nav {
 }
 
 .terms input[type="checkbox"] {
+    cursor: pointer;
 
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
 
     margin-right: 1%;
 }
@@ -1209,7 +1282,6 @@ nav {
 
 .navigationFooter ul li {
     margin-bottom: 10%;
-    transition: none;
 }
 
 .offices {
@@ -1249,8 +1321,9 @@ nav {
 
 .socials a {
     margin: 3%;
-    transition: all .2s ease-in;
 }
+
+
 
 .policies {
     width: 100%;
@@ -1270,7 +1343,7 @@ nav {
     transition: all .2s ease-in;
 }
 
-.socials a:hover, .policies a:hover {
+.policies a:hover {
     transform: scale(1.1);
 }
 
@@ -1346,9 +1419,10 @@ nav {
 
 @media screen and (max-width: 780px) {
     html {
-        --xs: 1.2em;
+        --xxs: .7em;
+        --xs: 1em;
         --s: 1.0625em; /* 17/16 */
-        --sm: 1.5em; /* 24/16 */ 
+        --sm: 1.2em; /* 24/16 */ 
         --m: 2em; /* 32/16 */
         --ml: 2.6875em; /* 43/16 */
         --l: 3em; /* 96/16 */
@@ -1479,6 +1553,42 @@ nav {
     .filaAncha .col2{
         flex-direction: column;
         align-items: center;
+    }
+
+    .info {
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+    .active::after {
+        content: "";
+        position: absolute;
+    
+        height: 1px;
+        width: 15px;
+    
+        right: -55%;
+        top: 50%;
+    
+        background-color: white;
+    
+        z-index: 999;
+    }
+    
+    .active::before {
+        content: "";
+        position: absolute;
+    
+        height: 1px;
+        width: 15px;
+    
+        left: -55%;
+        top: 50%;
+    
+        background-color: white;
+    
+        z-index: 999;
     }
 }
 
