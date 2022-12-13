@@ -19,8 +19,8 @@ html {
 
     --xs: 1.2em;
     --s: 1.5em; /* 24/16 */
-    --sm: 1.875em; /* 30/16 */ 
-    --m: 3em; /* 48/16 */
+    --sm: 1.675em; /* 30/16 */ 
+    --m: 2.2em; /* 48/16 */
     --ml: 4em; /* 64/16 */
     --l: 6em; /* 96/16 */
 
@@ -1097,13 +1097,19 @@ nav {
 
 /* =================================== FOOTER ========================================= */
 
+.footer, .footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+}
+
 .newsletter {
     background-color: var(--colorPrimario);
-    padding-top: 2%;
+    padding: 4% 0;
 }
 .newsletter > h1 {
     text-align: center;
-    margin: 2% 0;
+    /* margin: 2% 0; */
     color: white;
     font-weight: 100;
 }
@@ -1112,7 +1118,7 @@ nav {
     display: flex;
     justify-content: center;
 
-    margin: 5% 0 2% 0;
+    margin: 2% 0 2% 0;
 }
 
 .rellenable input {
@@ -1182,6 +1188,100 @@ nav {
 .terms a{
     color: white;
     text-decoration: none;
+}
+
+.content {
+    margin: 5% 5% 0 5%;
+}
+
+.info {
+    display: flex;
+
+    font-family: var(--outfit);
+    font-size: var(--s);
+}
+
+.navigationFooter {
+    flex: 1;
+
+    text-align: center;
+}
+
+.navigationFooter ul li {
+    margin-bottom: 10%;
+    transition: none;
+}
+
+.offices {
+    flex: 1;
+
+    text-align: center;
+}
+
+.locations {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+.locations a {
+    margin-bottom: 10%;
+}
+
+.powered {
+    width: 100%;
+    text-align: center;
+
+    font-family: var(--poppins);
+    font-size: var(--m);
+
+    padding: 3% 0;
+}
+
+.socials {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+
+    padding: 2% 0;
+}
+
+.socials a {
+    margin: 3%;
+    transition: all .2s ease-in;
+}
+
+.policies {
+    width: 100%;
+
+    font-family: var(--poppins);
+    font-size: var(1em);
+
+    font-weight: 100;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 2%;
+}
+
+.policies a {
+    transition: all .2s ease-in;
+}
+
+.socials a:hover, .policies a:hover {
+    transform: scale(1.1);
+}
+
+.copy {
+    text-align: center;
+    font-family: var(--poppins);
+    font-size: var(1.2em);
+}
+
+.policies p {
+    margin: 0 1%;
 }
 
 @media screen and (max-width: 1160px) {
