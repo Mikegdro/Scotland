@@ -1087,7 +1087,7 @@ nav {
 
     background-image: url('../src/images/Travel/parallax.jpg');
     background-attachment: fixed;
-    background-position: bottom bottom;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -1095,6 +1095,8 @@ nav {
     font-weight: 200;
 
     padding-bottom: 2%;
+
+    position: relative;
 }
 
 .parallaxTravel h1 {
@@ -1109,6 +1111,23 @@ nav {
     margin-bottom: 2%;
 }
 
+.middleOverlay {
+    position: absolute;
+
+    background-color: #3D3D3D90;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+}
+
+.parallaxTravel *:not(.middleOverlay) {
+    z-index: 999;
+    position: relative;
+}
+
 .seleccion{
     color: white;
 
@@ -1116,6 +1135,10 @@ nav {
     text-decoration: none;
 
     position: relative;
+}
+
+.parallaxTravel .tc {
+    color: white;
 }
 
 .seleccion::after {
@@ -1145,6 +1168,61 @@ nav {
 
 .links a {
     line-height: 200%;
+}
+
+.containerTrain {
+    margin: 2% 5% 0 5%;
+    display: flex;
+    gap: 15px;
+}
+
+.byTrain > h1 {
+    margin: 5% 0;
+    font-weight: 200;
+    color: white;
+}
+
+.textoRailways {
+    color: white;
+    flex: 1;
+
+    font-weight: 100;
+    text-align: justify;
+
+    line-height: normal;
+}
+
+.fotoRailways {
+    flex: 1;
+
+    background-image: url('../src/images/Travel/railway1.gif');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.buttonsTrain {
+    margin: 2% 5% 0 5%;
+
+    display: flex;
+    gap: 15px;
+}
+
+.buttonTrain {
+    flex: 1;
+    padding-bottom: 10%;
+    background-color: red;
+
+    position: relative;
+}
+.buttonTrain .tc {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 /* ==========================================================================ROUTES=========================================== */
 .homeRoutes {
