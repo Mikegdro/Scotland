@@ -1082,6 +1082,66 @@ nav {
     background-image: url('../src/images/Travel/ferries.jpeg');
 }
 
+.parallax {
+    width: 100%;
+
+    background-color: #08546C;
+
+    font-family: 'Outfit';
+    font-weight: 200;
+
+    padding-bottom: 2%;
+}
+
+.parallax h1 {
+    font-size: var(--ml);
+
+    padding: 4% 0;
+}
+
+.parallax h2 {
+    font-size: var(--ml);
+
+    margin-bottom: 2%;
+}
+
+.seleccion {
+    color: white;
+
+    font-size: var(--sm);
+    text-decoration: none;
+
+    position: relative;
+}
+
+.seleccion::after {
+    content: '';
+
+    background-color: white;
+
+    max-width: 70%;
+    width: 100%;
+    height: 2px;
+
+    bottom: -15%;
+    left: 15%;
+    position: absolute;
+
+    transition: max-width .2s ease-in;
+}
+
+.seleccion:hover::after {
+    background-color: red;
+}
+
+.links {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.links a {
+    line-height: 200%;
+}
 /* ==========================================================================ROUTES=========================================== */
 .homeRoutes {
     background-image: url('../src/images/Routes/hero.jpg');
