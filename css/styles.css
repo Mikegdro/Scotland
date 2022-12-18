@@ -356,11 +356,16 @@ nav {
     
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    
+    margin: 1% 3% 100px 3%;
 }
 
 .contenido .wrapper > h1 {
     text-align: center;
     text-shadow: black 1px 1px 5px;
+    position: relative;
+    z-index: 999;
 }
 
 .swiper > h1 {
@@ -379,7 +384,6 @@ nav {
     box-sizing: border-box;
 
     text-align: justify;
-    margin: 1% 3% 7% 3%;
 
     background-color: #3D3D3D30;
     font-weight: 100;
@@ -1591,9 +1595,14 @@ nav {
     left: 25%;
 }
 
-.sliderRoute .tarjeta{
-    margin-bottom: 100px;
+.showMap {
+    padding: 3% 2%;
+    background-color: #3D3D3D84;
+    border: 1px solid rgba(0, 0, 0, 0.575);
+    
 }
+
+
 
 /* =================================== FOOTER ========================================= */
 
@@ -2072,6 +2081,30 @@ nav {
         margin-top: 5%;
     }
 
+    .homeRoutes .overlayHero {
+        width: 100%;
+        height: 50%;
+        top: 0;
+        left: 0%;
+
+        position: relative;
+    }
+
+    .routesTitle {
+        display: none;
+    }
+
+    .homeRoutes .overlayHero p {
+        color: white;
+
+        letter-spacing: 3em;
+        margin-left: -1.5em;
+
+        position: absolute;
+
+        left: 25%;
+        top: -2.5%;
+    }
 }
 
 @media screen and (max-width: 470px) {
