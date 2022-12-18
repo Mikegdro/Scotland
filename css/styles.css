@@ -134,6 +134,10 @@ body{
     position: relative;
 }
 
+.overlayHero p {
+    display: none;
+}
+
 .homeHero {
     background-image: url('../src/images/Home/HeroHome.jpg');
 }
@@ -2084,7 +2088,7 @@ nav {
     .homeRoutes .overlayHero {
         width: 100%;
         height: 50%;
-        top: 0;
+        top: 50%;
         left: 0%;
 
         position: relative;
