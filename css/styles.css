@@ -259,14 +259,6 @@ nav {
     align-items: center;
 }
 
-.wrapperLogo:not(.onHero) {
-    justify-content: start;
-}
-
-.wrapperLogo:not(.onHero) .logo {
-    background-image: url('../src/images/Home/logo.svg');
-    padding-bottom: 45%;
-}
 
 .wrapperLogo .logo {
     background-image: url('../src/images/Home/logo.png');
@@ -1051,6 +1043,10 @@ nav {
 .byCar > h1, .ireland > h2, .europe > h2 {
     margin: 5% 0 0 5%;
 }
+
+.ireland {
+    margin-bottom: 5%;
+}
 .contentByCar {
     display: flex;
 }
@@ -1091,7 +1087,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 
-    font-family: 'Outfit';
+    font-family: var(--poppins);
     font-weight: 200;
 
     padding-bottom: 2%;
@@ -1100,7 +1096,7 @@ nav {
 }
 
 .parallaxTravel h1 {
-    font-size: var(--ml);
+    font-size: var(--m);
 
     padding: 4% 0;
 }
@@ -1129,16 +1125,18 @@ nav {
 }
 
 .seleccion{
-    color: white;
-
-    font-size: var(--sm);
-    text-decoration: none;
-
     position: relative;
+}
+
+.seleccion a {
+    color: white;
+    
+    text-decoration: none;
 }
 
 .parallaxTravel .tc {
     color: white;
+    font-weight: 100;
 }
 
 .seleccion::after {
@@ -1150,7 +1148,7 @@ nav {
     width: 100%;
     height: 2px;
 
-    bottom: -15%;
+    bottom: -25%;
     left: 15%;
     position: absolute;
 
@@ -1202,7 +1200,7 @@ nav {
 }
 
 .buttonsTrain {
-    margin: 2% 5% 0 5%;
+    margin: 5% 5% 2% 5%;
 
     display: flex;
     gap: 15px;
@@ -1210,19 +1208,37 @@ nav {
 
 .buttonTrain {
     flex: 1;
-    padding-bottom: 10%;
+
     background-color: red;
+    padding: 2% 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
 
     position: relative;
 }
-.buttonTrain .tc {
-    position: absolute;
-    top: 0%;
-    left: 0%;
+.buttonTrain .seleccion {
+    text-align: center;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+
+    z-index: 999;
+
+    font-weight: 100;
+}
+
+.btn1 {
+    background-image: url('../src/images/Travel/ButtonRailroad.jpg');
+    background-position: center center;
+}
+
+.btn2 {
+    background-image: url('../src/images/Travel/ScottishRailroad.jpg');
+    background-position: center center;
 }
 /* ==========================================================================ROUTES=========================================== */
 .homeRoutes {
@@ -1546,6 +1562,10 @@ nav {
 
 @media screen and (max-width: 1160px) {
 
+    html {
+        --s: 1.2em;
+    }
+
     .homeHero {
         background-image: url('../src/images/Home/hero.jpg');
     }
@@ -1607,8 +1627,8 @@ nav {
 @media screen and (max-width: 780px) {
     html {
         --xxs: .7em;
-        --xs: 1em;
-        --s: 1.0625em; /* 17/16 */
+        --xs: .9em;
+        --s: 1em; /* 17/16 */
         --sm: 1.2em; /* 24/16 */ 
         --m: 2em; /* 32/16 */
         --ml: 2.6875em; /* 43/16 */
@@ -1781,6 +1801,33 @@ nav {
 
     .fotoReferendum {
         padding-bottom: 50%;
+    }
+
+    .contentByCar {
+        flex-direction: column;
+        margin-bottom: 15%;
+    }
+
+    .fotoContent1, .fotoContent2 {
+        padding-bottom: 50%;
+    }
+
+    .containerTrain {
+        flex-direction: column;
+    }
+
+    .fotoRailways {
+        padding-bottom: 50%;
+    }
+
+    .buttonsTrain {
+        flex-direction: column;
+
+        margin-bottom: 10%;
+    }
+    
+    .buttonTrain {
+        padding: 10% 5%;
     }
 }
 
