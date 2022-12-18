@@ -7,6 +7,7 @@ html {
     --colorPrimario: #08546C;
     --colorSecundario: #BAF7FF;
     --colorTerciario: #8F0D59; /* Este lo más probable es que no lo utilice*/
+    --grisOscuro: #3D3D3D;
     --colorFondo: #3D3D3D40;
     --colorFondoSecundario: #5D5D5D;
     --colorFondoAzul: #08546C50;
@@ -1177,7 +1178,7 @@ nav {
 }
 
 .containerTrain, .contentPlane {
-    margin: 2% 5% 0 5%;
+    margin: 5% 5% 0 5%;
     display: flex;
     gap: 15px;
 }
@@ -1211,7 +1212,7 @@ nav {
     margin: 5% 5% 2% 5%;
 
     display: flex;
-    gap: 15px;
+    gap: 50px;
 }
 
 .buttonTrain {
@@ -1228,6 +1229,13 @@ nav {
     background-repeat: no-repeat;
 
     position: relative;
+
+    transition: all .2s ease-in-out;
+}
+
+.buttonTrain:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 .buttonTrain .seleccion {
     text-align: center;
@@ -1367,7 +1375,6 @@ nav {
 
 .buttonPlane a:hover {
     cursor: pointer;
-    color: grey;
 }
 
 .textoRailways .buttonPlane {
@@ -1391,18 +1398,23 @@ nav {
 
 .cajaFlotante {
     width: 40%;
+    height: 20%;
     position: absolute;
     background-color: #08546C;
 
     left: 30%;
-    top: -25%;
+    top: -10%;
 
     text-align: center;
     font-weight: 100;
     color: white;
 
-    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .logos {
     padding: 5%;
@@ -1418,7 +1430,7 @@ nav {
     height: 100%;
 
     flex: 1;
-    padding-bottom: 15%;
+    padding-bottom: 5%;
 }
 
 .logo1 {
@@ -1428,6 +1440,38 @@ nav {
 .logo2 {
     background-image: url('../src/images/Travel/Loganair_logo.svg');
 }
+
+.travelPolicies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 300;
+
+    color: var(--grisOscuro);
+
+    background-color: white;
+
+    padding-bottom: 5%;
+}
+
+.travelPolicies > h1, .travelPolicies h3 {
+    margin: 5% 0 3% 0;
+    color: var(--colorPrimario)
+}
+
+.travelPolicies li {
+    list-style-type: disc;
+    list-style-position: inside;
+
+    line-height: normal;
+}
+
+.bring, .covid {
+    padding: 0 15%;   
+}
+
 /* ==========================================================================ROUTES=========================================== */
 .homeRoutes {
     background-image: url('../src/images/Routes/hero.jpg');
@@ -2067,6 +2111,15 @@ nav {
         letter-spacing: 5px !important;
     }
     
+    .logoAir {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100%;
+
+        flex: 1;
+        padding-bottom: 15%;
+    }   
 }
 
 @media screen and (max-height: 550px) and (orientation: landscape) {
