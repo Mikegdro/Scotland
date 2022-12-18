@@ -1081,7 +1081,7 @@ nav {
 .parallaxTravel {
     width: 100%;
 
-    background-image: url('../src/images/Travel/parallax.jpg');
+    
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -1093,6 +1093,14 @@ nav {
     padding-bottom: 2%;
 
     position: relative;
+}
+
+.fotoP1 {
+    background-image: url('../src/images/Travel/parallax.jpg');
+}
+
+.fotoP2 {
+    background-image: url('../src/images/Travel/middle.jpg');
 }
 
 .parallaxTravel h1 {
@@ -1168,13 +1176,13 @@ nav {
     line-height: 200%;
 }
 
-.containerTrain {
+.containerTrain, .contentPlane {
     margin: 2% 5% 0 5%;
     display: flex;
     gap: 15px;
 }
 
-.byTrain > h1 {
+.byTrain > h1, .byPlane {
     margin: 5% 0;
     font-weight: 200;
     color: white;
@@ -1239,6 +1247,186 @@ nav {
 .btn2 {
     background-image: url('../src/images/Travel/ScottishRailroad.jpg');
     background-position: center center;
+}
+
+
+.UIConnections {
+    flex: 1;
+
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentPlane {
+    padding-bottom: 10%;
+}
+
+.UIHeader {
+    flex: .3;
+    margin: 4%;
+}
+
+.UIHeader span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color:#3D3D3D;
+    font-family: var(--outfit);
+}
+
+.UIHeader a:hover {
+    cursor: pointer;
+}
+
+.UIHeader .bi {
+    height: 0;
+}
+
+.directConnections {
+    background-image: url('../src/images/Travel/invernessDirectConnections.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    flex: 10;
+
+    padding-bottom: 60%;
+
+    width: 100%;
+}
+
+.UIFooter {
+    margin: 4%;
+}
+
+.UIFooter > h2 {
+    color: var(--colorPrimario);
+}
+
+.inputField {
+    width: 100%;
+
+    margin: 10% 0;
+
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputField input[type="text"] {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #3D3D3D;
+
+    color: #3D3D3D;
+    font-family: 'Poppins';
+
+    flex: 5;
+
+    outline: none;
+}
+
+.inputField input[type="text"]::placeholder {
+    color: #3D3D3D;
+    font-family: 'Poppins';
+    text-transform: capitalize;
+}
+
+.inputField > a {
+    color: #3D3D3D;
+    font-size: var(--sm);
+
+    flex: 1;
+}
+
+.inputField > a:hover {
+    cursor: pointer;
+}
+
+.buttonPlane {
+    display: flex;
+    justify-content: end;
+
+    box-sizing: border-box;
+
+    padding-right: 15%;
+}
+
+.buttonPlane a {
+    border: 1px solid #3D3D3D;
+
+    padding: 1% 7%;
+
+    color: #3D3D3D;
+
+    transition: color .2s ease-in;
+}
+
+.buttonPlane a:hover {
+    cursor: pointer;
+    color: grey;
+}
+
+.textoRailways .buttonPlane {
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+
+    margin: 5%;
+}
+
+.textoRailways .buttonPlane a {
+    color: white;
+    border: 1px solid white;
+}
+
+.airlines {
+    width: 100%;
+    background-color: grey;
+    position: relative;
+}
+
+.cajaFlotante {
+    width: 40%;
+    position: absolute;
+    background-color: #08546C;
+
+    left: 30%;
+    top: -25%;
+
+    text-align: center;
+    font-weight: 100;
+    color: white;
+
+    padding: 1%;
+}
+
+.logos {
+    padding: 5%;
+
+    display: flex;
+    gap: 15px;
+}
+
+.logoAir {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    flex: 1;
+    padding-bottom: 15%;
+}
+
+.logo1 {
+    background-image: url('../src/images/Travel/air-scotland-british-seeklogo.svg');
+}
+
+.logo2 {
+    background-image: url('../src/images/Travel/Loganair_logo.svg');
 }
 /* ==========================================================================ROUTES=========================================== */
 .homeRoutes {
@@ -1829,6 +2017,17 @@ nav {
     .buttonTrain {
         padding: 10% 5%;
     }
+
+    .parallaxTravel {
+        background-attachment: local;
+    }
+
+    .contentPlane {
+        flex-direction: column;
+
+        margin-top: 5%;
+    }
+
 }
 
 @media screen and (max-width: 470px) {
