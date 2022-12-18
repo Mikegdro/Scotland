@@ -2091,7 +2091,7 @@ nav {
         top: 50%;
         left: 0%;
 
-        position: relative;
+        position: absolute;
     }
 
     .routesTitle {
@@ -2100,14 +2100,7 @@ nav {
 
     .homeRoutes .overlayHero p {
         color: white;
-
-        letter-spacing: 3em;
-        margin-left: -1.5em;
-
-        position: absolute;
-
-        left: 25%;
-        top: -2.5%;
+        
     }
 }
 
