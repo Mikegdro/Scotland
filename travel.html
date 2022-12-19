@@ -312,7 +312,7 @@
             <div class="content">
                 <div class="info">
                     <div class="navigationFooter">
-                        <h1>Navigation</h1>
+                        <h1 class="sm bold">Navigation</h1>
                         <br/><br/>
                         <ul>
                             <li class="link"><a class="active" href="index.html">Home</a></li>
@@ -322,30 +322,32 @@
                         </ul>
                     </div>
                     <div class="offices">
-                        <h1>Public Offices</h1>
-                        <br/><br/>
-                        <div class="map">
+                        <h1 class="sm bold">Public Offices</h1>
+                        <div class="officesMap">
+                            <div id="footerMap" class="mapFilter">
 
+                            </div>
+                            <div class="locations">
+                                <a href="#">
+                                    Edimburgh
+                                    <i class="bi bi-geo-alt"></i>
+                                </a>
+                                <a href="#">
+                                    Inverness
+                                    <i class="bi bi-geo-alt"></i>
+                                </a>
+                                <a href="#">
+                                    Perth
+                                    <i class="bi bi-geo-alt"></i>
+                                </a>
+                                <a href="#">
+                                    Aberdeen
+                                    <i class="bi bi-geo-alt"></i>
+                                </a>
+    
+                            </div>
                         </div>
-                        <div class="locations">
-                            <a href="#">
-                                Edimburgh
-                                <i class="bi bi-geo-alt"></i>
-                            </a>
-                            <a href="#">
-                                Inverness
-                                <i class="bi bi-geo-alt"></i>
-                            </a>
-                            <a href="#">
-                                Perth
-                                <i class="bi bi-geo-alt"></i>
-                            </a>
-                            <a href="#">
-                                Aberdeen
-                                <i class="bi bi-geo-alt"></i>
-                            </a>
-
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="powered">
@@ -384,6 +386,7 @@
 
     <!-- <script src="index.js"></script> -->
     <script src="button.js"></script>
+    <script src="mapFooter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="

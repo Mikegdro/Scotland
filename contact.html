@@ -50,7 +50,7 @@
             <div class="container swiper">
                 <div class="swiper-pagination"></div>
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide big">
                         <form action="" class="form">
                             <input type="text" placeholder="Name">
                             <input type="text" placeholder="Email">
@@ -163,6 +163,7 @@
     </body>
 
     <script src="routes.js"></script>
+    <script src="mapFooter.js"></script>
     <script src="button.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
@@ -197,20 +198,10 @@
             }
         });
 
-        const map = L.map('footerMap', {
-            dragging: false,
-            scrollWheelZoom: false,
-        }).setView([56.4906712, -4.2026458], 6);
-
         const mapa = L.map('map', {
             dragging: false,
             scrollWheelZoom: false,
         }).setView([56.4906712, -4.2026458], 6);
-
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
