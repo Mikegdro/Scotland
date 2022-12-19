@@ -1807,7 +1807,7 @@ nav {
     width: 80%;
 
     backdrop-filter: blur( 14px );
-    border: 1px solid #3D3D3D;
+    border: 5px solid #3D3D3D30;
     background-color: #3D3D3D50;
     border-radius: 25px;
 
