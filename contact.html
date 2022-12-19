@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+        crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> -->
+        <title>Scotland - Contact</title>
+    </head>
+    <body>
+
+        <section class="contactHero">   
+            <nav>
+                <div class="wrapperLogo onHero">
+                    <div class="logo">
+
+                    </div>
+                </div>
+                
+                <ul class="nav o s">
+                    <li class="link"><a href="#">Home</a></li>
+                    <li class="link"><a href="travel.html">Travel</a></li>
+                    <li class="link"><a href="routes.html">Routes</a></li>
+                    <li class="link"><a class="active" href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="collapsible">
+                    <div class="menuButton">
+                        <div class="menuButtonBurger"></div>
+                    </div>
+                </div>
+            </nav>     
+            <div class="hiddenMenu">
+                <ul class="nav o s">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="routes.html">Routes</a></li>
+                    <li><a class="link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="canvas">
+            <div class="container swiper">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <form action="" class="form">
+                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Email">
+                            <input type="number" placeholder="Phone Number">
+                            <textarea placeholder="What do you need?"></textarea>
+                            <span class="button">
+                                <a> Send</a>
+                            </span>
+                        </form>
+                    </div>
+                    <div class="swiper-slide">
+                        <div id="map" class="mapFilter">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Footer -->
+        <section class="footer">
+            <div class="newsletter">
+                <h1 class="p m">Learn more about <span class="bold">Scotland!</span></h1>
+                <form action="#">
+                    <div class="rellenable">
+                        <input type="text" placeholder="Email">
+                        <button type="submit">
+                            <img class="bi" src="./src/images/Home/send.svg">
+                        </button>
+                    </div>
+                    <div class="terms">
+                        <input type="checkbox">
+                        <p class="o ">I accept the <span class="bold"><a class="not" href="#">Terms of Service</a></span></p>
+                    </div>
+                </form>
+            </div>
+            <div class="content">
+                <div class="info">
+                    <div class="navigationFooter">
+                        <h1 class="sm bold">Navigation</h1>
+                        <br/><br/>
+                        <ul>
+                            <li class="link"><a class="active" href="index.html">Home</a></li>
+                            <li class="link"><a href="travel.html">Travel</a></li>
+                            <li class="link"><a href="routes.html">Routes</a></li>
+                            <li class="link"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="offices">
+                        <h1 class="sm bold">Public Offices</h1>
+                        <div class="officesMap">
+                            <div id="footerMap" class="mapFilter">
+
+                            </div>
+                            <div class="locations">
+                                <a href="#">
+                                    Edimburgh
+                                    <i class="bi bi-geo-alt"></i>
+                                </a>
+                                <a href="#">
+                                    Inverness
+                                    <i class="bi bi-geo-alt"></i>
+                                </a>
+                                <a href="#">
+                                    Perth
+                                    <i class="bi bi-geo-alt"></i>
+                                </a>
+                                <a href="#">
+                                    Aberdeen
+                                    <i class="bi bi-geo-alt"></i>
+                                </a>
+    
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="powered">
+                    <h1>Powered by <span class="bold">The Ministry</span>
+                        of <span class="bold">Tourism</span> of 
+                        <span class="bold">
+                            Scotland
+                        </span>
+                    </h1>
+                </div>
+                <div class="socials">
+                    <div class="zoom">
+                        <a class="bi bi-facebook" href="#"></a>
+                    </div>
+                    <div class="zoom">
+                        <a class="bi bi-discord" href="#"></a>
+                    </div>
+                    <div class="zoom">
+                        <a class="bi bi-twitter" href="#"></a>
+                    </div>
+                    <div class="zoom">
+                        <a class="bi bi-whatsapp" href="#"></a>
+                    </div>
+                </div>
+                <div class="policies xxs">
+                    <a href="#">Cookie policy</a> <p>·</p>
+                    <a href="#">Privacy policy</a><p>·</p>
+                    <a href="#">Public policy</a>
+                </div>
+                <div class="copy">
+                    <p class="xxs">©Scotland’s Ministry of Tourism and foreign affairs · All Rights Reserved · 2022</p>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <script src="routes.js"></script>
+    <script src="button.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    let texto;
+                    console.log(index)
+                    switch (index) {
+                        case 0: 
+                            texto = "Contact us"; 
+                            break;
+                        case 1: 
+                            texto = "Offices";
+                            break;
+                    }
+                    return '<span class="' + className + ' seleccion' + '">' + texto + "</span>";
+                },
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+
+        const map = L.map('footerMap', {
+            dragging: false,
+            scrollWheelZoom: false,
+        }).setView([56.4906712, -4.2026458], 6);
+
+        const mapa = L.map('map', {
+            dragging: false,
+            scrollWheelZoom: false,
+        }).setView([56.4906712, -4.2026458], 6);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(mapa);
+    </script>
+</html>

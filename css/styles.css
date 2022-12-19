@@ -78,7 +78,7 @@ html {
     text-align: center;
 }
 
-#map {
+.mapFilter {
     filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
 }
 
@@ -1769,9 +1769,95 @@ nav {
     right: -3%;
 }
 
+/* =================================== CONTACT ============================================= */
+.contactHero {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+}
+
+.canvas {
+    width: 100%;
+    height: 90vh;
+
+    padding-top: 150px;
+
+    background-image: url('../src/images/Home/edimburgo.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: opacity(.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+
+    backdrop-filter: blur( 14px );
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container .swiper-pagination {
+    position: static;
+
+    box-sizing: border-box;
+    padding: 2%;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container .swiper-pagination-bullet {
+    background-color: transparent;
+
+    width: fit-content;
+    height: fit-content;
+
+    position: relative;
+
+    font-family: var(--poppins);
+    font-size: var(--m);
+    font-weight: 300;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    height: 100%;
+
+    justify-content: space-evenly;
+
+    box-sizing: border-box;
+    padding: 5% 10%;
+}
+
+.form .button {
+    text-align: center;
+}
+
+.form .button a {
+    padding: 15px 45px;
+    border: 1px solid #3D3D3D;
+}
+
+.form input, .form textarea {
+    padding: 1%;
+}
+
 /* =================================== FOOTER ========================================= */
 
-.footer, .footer a:not(.not) {
+.footer, .footer a:not(.not, .leaflet-control-zoom-out, .leaflet-control-zoom-in) {
     color: white;
     text-decoration: none;
     font-weight: 100;
@@ -1889,8 +1975,13 @@ nav {
     text-align: center;
 }
 
+.info > div > h1 {
+    text-decoration: underline;
+}
+
 .navigationFooter ul li {
     margin-bottom: 10%;
+    
 }
 
 .offices {
@@ -1899,11 +1990,27 @@ nav {
     text-align: center;
 }
 
-.locations {
+.officesMap {
+    width: 100%;
     height: 100%;
+
+    box-sizing: border-box;
+    padding: 5%;
+
+    display: flex;
+    gap: 15px;
+}
+
+.locations {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
+
+    float: left;
+    justify-content: space-around;
+}
+
+#footerMap {
+    flex: 1;
 }
 
 .locations a {
@@ -2279,6 +2386,14 @@ nav {
 
         height: auto;
         width: 100%;
+    }
+
+    .officesMap {
+        flex-direction: column;
+    }
+
+    #footerMap {
+        display: none;
     }
 }
 
