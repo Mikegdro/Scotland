@@ -242,18 +242,40 @@ nav {
 
 .link {
     transition: all .4s ease-in;
- 
+    position: relative;
 }
 
-.link:hover, .link:hover a  {
-    transform: scale(1.1);
-    color: var(--colorSecundario);
-    
+.link:hover {
     cursor: pointer;
 }
 
+
+.link::after {
+    content: '';
+
+    position: absolute;
+    /* width: 10%;
+    max-width: 0; */
+    height: 1px;
+    bottom: -15%;
+    /* left: 45%; */
+
+    background-color: #ffffff;
+
+    transition: all .2s ease-in-out;
+}
+
+.link:hover::after  {
+    max-width: 40px;
+}
+
+.active::before, .active::after {
+    max-width: 100%;
+    transition: all .2s ease-in-out;
+}
+
 .link:hover .active::before, .link:hover .active::after {
-    background-color: var(--colorSecundario);
+    max-width: 0;
 }
 
 .wrapperLogo {
@@ -1120,7 +1142,7 @@ nav {
 }
 
 .fotoContent2 {
-    background-image: url('../src/images/Travel/ferries.jpeg');
+    background-image: url('../src/images/Travel/ferry.jpg');
 }
 
 .parallaxTravel {
@@ -2004,10 +2026,15 @@ nav {
     border-radius: 4px;
 
     font-family: 'Outfit';
+
+    transition: all .2s ease-in-out;
 }
 
 .form .button a:hover {
     cursor: pointer;
+
+    background-color: white;
+    color: #3D3D3D;
 }
 
 .form input, .form textarea {
@@ -2034,6 +2061,33 @@ nav {
 }
 
 /* =================================== FOOTER ========================================= */
+
+.footer {
+    position: relative;
+}
+
+.footer::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background-image: url('../src/images/footer/Anonymous_map_of_Scotland.svg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    opacity: .2;
+}
+
+.content, .newsletter > * {
+    position: relative;
+    z-index: 999;
+}
 
 .footer, .footer a:not(.not, .leaflet-control-zoom-out, .leaflet-control-zoom-in) {
     color: white;
@@ -2091,6 +2145,13 @@ nav {
 .rellenable button {
     background-color: transparent;
     border: none;
+
+    transition: all .2s ease-in-out;
+}
+
+.rellenable button:hover {
+    cursor: pointer;
+    transform: scale(1.4);
 }
 
 .socials {
@@ -2579,6 +2640,11 @@ nav {
 
     .container .swiper-pagination {
         padding: 10%;
+    }
+
+    .siglo .boton, .siglo20 .boton {
+        margin: 3% 0;
+        margin-left: auto;
     }
 
 }
