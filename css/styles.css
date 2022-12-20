@@ -78,6 +78,12 @@ html {
     text-align: center;
 }
 
+.al {
+    text-align: left !important;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
 .mapFilter {
     filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
 }
@@ -319,6 +325,24 @@ nav {
     background-image: url('../src/images/Home/tren.jpg');
 }
 
+.bridge {
+    background-image: url('../src/images/Home/EmblematicPlaces/bridgeToKnowhere.jpg');
+    background-position: right;
+}
+
+.piramid {
+    background-image: url('../src/images/Home/EmblematicPlaces/craigngormsPiramid.jpeg');
+}
+
+.storr {
+    background-image: url('../src/images/Home/parallax4.jpg');
+    background-position: right;
+}
+
+.devils {
+    background-image: url('../src/images/Home/EmblematicPlaces/devilspulprit.jpg');
+}
+
 .button {
     color: white;
     margin: 0 5%;
@@ -358,7 +382,7 @@ nav {
     flex-direction: column;
     gap: 20px;
     
-    margin: 1% 3% 100px 3%;
+    margin: 1% 3% 70px 3%;
 }
 
 .contenido .wrapper > h1 {
@@ -422,7 +446,6 @@ nav {
 .tituloExperiences {
     position: absolute;
     top: 2%;
-    width: 100%;
 
     text-align: center;
     color: white;
@@ -508,6 +531,23 @@ nav {
     background-image: url('../src/images/Home/edimburgo.jpg');
 }
 
+.glass {
+    background-image: url('../src/images/Home/cities/glass.webp');
+}
+
+.perthHighlands {
+    background-image: url('../src/images/Home/cities/perth.jpg');
+    background-position: left;
+}
+
+.inverness {
+    background-image: url('../src/images/Home/cities/inverness.jpg');
+}
+
+.aberdeen {
+    background-image: url('../src/images/Home/cities/aberdeen.jpg');
+}
+
 /* ================================= HISTORY ========================================== */
 .entradilla {
     display: flex;
@@ -542,7 +582,7 @@ nav {
     display: flex;
 
     height: 50px;
-    margin: 4%;
+    margin: 0 0 10% 0;
 
     align-items: center;
     justify-content: space-evenly;
@@ -2066,6 +2106,7 @@ nav {
     font-size: var(--m);
 
     padding: 3% 0;
+    margin: 5% 0 3% 0;
 }
 
 .socials {
@@ -2079,8 +2120,6 @@ nav {
 .socials a {
     margin: 3%;
 }
-
-
 
 .policies {
     width: 100%;
@@ -2468,6 +2507,10 @@ nav {
         margin-bottom: 20%;
     }
 
+    .contenido {
+        margin-bottom: 0;
+    }
+
     .sliderHome .swiper-pagination {
         height: 1%;
     }
@@ -2493,7 +2536,7 @@ nav {
 
 @media screen and (max-height: 550px) and (orientation: landscape) {
     .reescaladoPortrait {
-        height: 200vh;
+        height: 200vh !important;
     }
 
     #map {
