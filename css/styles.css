@@ -1849,11 +1849,63 @@ nav {
     background-image: url('../src/images/Routes/northCoast/beinn.jpg');
 }
 
+
 /* ========RUTA 2============ */
 
 .fortWilliam {
     background-image: url('../src/images/Home/hero.jpg');
 }
+
+.glens {
+    background-image: url('../src/images/Travel/middle.jpg');
+}
+
+/* ========RUTA 3============ */
+
+.linlith {
+    background-image: url('../src/images/Routes/outlander/linlith.jpg');
+}
+
+.blackness{
+    background-image: url('../src/images/Routes/outlander/blackness.jpg');
+}
+
+.drummond{
+    background-image: url('../src/images/Routes/outlander/drummond.webp');
+}
+
+.fife {
+    background-image: url('../src/images/Routes/outlander/fife.jpg');
+}
+
+.highlands {
+    background-image: url('../src/images/Routes/outlander/highlands.jpg');
+}
+
+.ness {
+    background-image: url('../src/images/Routes/outlander/ness.jpeg');
+}
+
+.greatGlen {
+    background-image: url('../src/images/Routes/outlander/greatGlenn.jpg');
+}
+
+.glenCoe {
+    background-image: url('../src/images/Routes/outlander/glenCoe.jpg');
+}
+
+.edim2 {
+    background-image: url('../src/images/Routes/outlander/craigmillar.webp');
+}
+
+.ayshire {
+    background-image: url('../src/images/Routes/outlander/ayshire.jpg');
+}
+
+.glasgow {
+    background-image: url('../src/images/Routes/outlander/glasgow.jpg');
+}
+
 /* =================================== CONTACT ============================================= */
 .contactHero {
     width: 100%;
