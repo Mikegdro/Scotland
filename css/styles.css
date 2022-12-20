@@ -2716,7 +2716,7 @@ nav {
         height: 200vh !important;
     }
 
-    #map {
+    .container #map {
         height: 150vh;
     }
 }
