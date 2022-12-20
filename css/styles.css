@@ -206,16 +206,17 @@ nav {
     display: none;
 }
 
-.active {
+.link a {
     position: relative
 }
 
-.active::after {
+.link a::after {
     content: "";
     position: absolute;
 
     height: 1px;
     width: 15px;
+    max-width: 0;
 
     right: -35%;
     top: 50%;
@@ -223,14 +224,17 @@ nav {
     background-color: white;
 
     z-index: 999;
+
+    transition: all .2s ease-in-out;
 }
 
-.active::before {
+.link a::before {
     content: "";
     position: absolute;
 
     height: 1px;
     width: 15px;
+    max-width: 0;
 
     left: -35%;
     top: 50%;
@@ -238,35 +242,20 @@ nav {
     background-color: white;
 
     z-index: 999;
+
+    transition: all .2s ease-in-out;
 }
 
-.link {
-    transition: all .4s ease-in;
-    position: relative;
+.active::before, .active::after {
+    max-width: 100% !important;
 }
 
 .link:hover {
     cursor: pointer;
 }
 
-
-.link::after {
-    content: '';
-
-    position: absolute;
-    /* width: 10%;
-    max-width: 0; */
-    height: 1px;
-    bottom: -15%;
-    /* left: 45%; */
-
-    background-color: #ffffff;
-
-    transition: all .2s ease-in-out;
-}
-
-.link:hover::after  {
-    max-width: 40px;
+.link:hover a:not(.active)::after, .link:hover a:not(.active)::before {
+    max-width: 100%;
 }
 
 .active::before, .active::after {
@@ -275,7 +264,7 @@ nav {
 }
 
 .link:hover .active::before, .link:hover .active::after {
-    max-width: 0;
+    max-width: 0 !important;
 }
 
 .wrapperLogo {
@@ -1454,6 +1443,18 @@ nav {
 .textoRailways .buttonPlane a {
     color: white;
     border: 1px solid white;
+    
+    transition: all .2s ease-in-out;
+}
+
+.textoRailways .buttonPlane a:hover {
+    color: var(--grisOscuro);
+    font-weight: 400;
+
+    transform: scale(1.2);
+
+    border: 1px solid rgb(80, 80, 80);
+    background-color: grey;
 }
 
 .airlines {
@@ -1661,7 +1662,16 @@ nav {
     padding: 1% 2%;
     background-color: #3D3D3D84;
     border: 1px solid rgba(0, 0, 0, 0.575);
-    
+
+    transition: all .2s ease-in-out;
+}
+
+.showMap:hover {
+    color: #3D3D3D;
+
+    cursor: pointer;
+
+    background-color: #9D9D9D;
 }
 
 .middleRoute {
@@ -1678,7 +1688,7 @@ nav {
 
     font-weight: 200;
 
-    padding: 5%;
+    padding: 2%;
 }
 
 .startEnd {
@@ -2214,9 +2224,9 @@ nav {
     text-align: center;
 }
 
-.info > div > h1 {
+/* .info > div > h1 {
     text-decoration: underline;
-}
+} */
 
 .navigationFooter ul li {
     margin-bottom: 10%;
@@ -2254,6 +2264,14 @@ nav {
 
 .locations a {
     margin-bottom: 10%;
+
+    transition: all .2s ease-in-out;
+}
+
+.locations a:hover{
+    transform: scale(1.1);
+    color: var(--colorTerciario);
+    font-weight: 400;
 }
 
 .powered {

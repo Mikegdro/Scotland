@@ -106,23 +106,22 @@
 
                             </div>
                             <div class="locations">
-                                <a href="#">
+                                <a href="https://www.visitscotland.com/info/services/edinburgh-icentre-p234441">
                                     Edimburgh
                                     <i class="bi bi-geo-alt"></i>
                                 </a>
-                                <a href="#">
+                                <a href="https://www.visitscotland.com/info/services/inverness-icentre-p333031">
                                     Inverness
                                     <i class="bi bi-geo-alt"></i>
                                 </a>
-                                <a href="#">
+                                <a href="https://www.visitscotland.com/info/services/perth-icentre-p234431">
                                     Perth
                                     <i class="bi bi-geo-alt"></i>
                                 </a>
-                                <a href="#">
+                                <a href="https://www.visitscotland.com/info/services/aberdeen-icentre-p332241">
                                     Aberdeen
                                     <i class="bi bi-geo-alt"></i>
                                 </a>
-    
                             </div>
                         </div>
                         
@@ -208,5 +207,34 @@
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(mapa);
+
+        loadPins();
+
+        function loadPins() {
+            var inverness = L.marker([57.48759, -4.221497]).addTo(mapa);
+            inverness.class = ".inverness";
+            inverness.on('click', () => {
+                window.location.assign('https://www.visitscotland.com/info/services/inverness-icentre-p333031');
+            });
+
+            var perth = L.marker([56.393474, -3.434833]).addTo(mapa);
+            perth.class = ".perth";
+            perth.on('click', () => {
+                window.location.assign("https://www.visitscotland.com/info/services/perth-icentre-p234431");
+            });
+
+            var aberdeen = L.marker([57.15, -2.1]).addTo(mapa);
+            aberdeen.class = ".aberdeen";
+            aberdeen.on('click', () => {
+                window.location.assign("https://www.visitscotland.com/info/services/aberdeen-icentre-p332241");
+            });
+
+            var edimburgh = L.marker([55.953333, -3.189167]).addTo(mapa);
+            edimburgh.class = ".edimburgh";
+            edimburgh.on('click', () => {
+                window.location.assign("https://www.visitscotland.com/info/services/edinburgh-icentre-p234441");
+            });
+        }
+        
     </script>
 </html>
